@@ -1,12 +1,14 @@
 import React from 'react'
 import { Navbar,Container, FormControl, Nav, Badge,Dropdown } from 'react-bootstrap'
 import {FaShoppingCart} from 'react-icons/fa'
-const Header = () => {
+import { Link } from 'react-router-dom'
+const Header = (props) => {
   return (
+    <>
     <Navbar bg='dark' variant='dark' style={{height:80}}>
       <Container>
         <Navbar.Brand>
-          <a href="/">Shopping Cart</a>
+          <Link to="/">Shopping Cart</Link>
         </Navbar.Brand>
         <Navbar.Text className='search'>
           <FormControl style={{width:500}} placeholder='Search a product' className='m-auto'/>
@@ -25,6 +27,10 @@ const Header = () => {
         </Nav>
       </Container>
     </Navbar>
+    <div>
+      <h1>hellow{props.name}</h1>
+    </div>
+    </>
   )
 }
 
