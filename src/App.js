@@ -8,7 +8,7 @@ import Cart from './Component/Cart';
 function App() {
   return (
     <BrowserRouter>
-    <Header name="Tanuja"/>
+    <Header></Header>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Cart" element={<Cart />} />

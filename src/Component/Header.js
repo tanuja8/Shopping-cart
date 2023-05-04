@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar,Container, FormControl, Nav, Badge,Dropdown } from 'react-bootstrap'
 import {FaShoppingCart} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-const Header = (props) => {
+const Header = () => {
   return (
     <>
     <Navbar bg='dark' variant='dark' style={{height:80}}>
@@ -28,7 +28,7 @@ const Header = (props) => {
       </Container>
     </Navbar>
     <div>
-      <h1>hellow{props.name}</h1>
+      
     </div>
     </>
   )
