@@ -6,6 +6,8 @@ import Home from './Component/Home';
 import Cart from './Component/Cart';
 
 function App() {
+  const name="tanuja"; 
+
   return (
     <BrowserRouter>
     <Header></Header>

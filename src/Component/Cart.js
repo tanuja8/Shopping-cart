@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Cart(props) {
+function Cart() {
   return (
     <div>
-      Caaarttttt
-      {props.message}
+      <h1>this is cart page</h1>
     </div>
   )
 }
