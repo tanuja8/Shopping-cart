@@ -1,10 +1,22 @@
 import React from 'react'
+import { CartState } from './Context/Context'
+import Singleproduct from './Singleproduct';
+import "./Style.css";
 
-function Home() {
+const Home=() => {
+  const {
+    state:{products},}=CartState();
+  console.log(products);
   return (
-    <div>
-      Homeeeee
-    </div>
+<div className='home'>
+  {/* <Filter/> */}
+  <div className='productcontainer'>
+  {products.map((prod)=>{
+    return<h6><Singleproduct prod={prod} key={prod.id}>
+      </Singleproduct></h6>
+  })}
+</div>
+</div>
   )
 }
 
