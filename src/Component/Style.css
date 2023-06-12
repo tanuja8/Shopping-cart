@@ -9,3 +9,17 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.filter{
+    background-color: rgb(70, 70, 70);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 10px;
+    height: 86vh;
+}
+.filter > span{
+    padding-bottom: 20px;
+    
+}
