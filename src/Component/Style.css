@@ -3,14 +3,9 @@
 }
 
 .productcontainer{
-    /* display: flex;
-    width: 78%;
-    padding: 20px;
-    flex-wrap: wrap;
-    justify-content: space-around; */
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: .5rem;
+    grid-template-columns: repeat(4,2fr);
+    gap: 15px;
 }
 .filter{
     background-color: rgb(70, 70, 70);
