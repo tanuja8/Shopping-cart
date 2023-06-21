@@ -19,7 +19,7 @@ const Context = ({children}) => {
     }));
     const [state,dispatch]=useReducer(cartReducer,{
           products:products,
-          Cart:[] 
+          cart:[] 
     })
   return (
     <Cart.Provider value={{state,dispatch}}>
