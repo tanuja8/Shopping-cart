@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CartState } from './Context/Context'
-import { Button, ListGroup } from 'react-bootstrap';
+import { Button, Col, ListGroup, Row } from 'react-bootstrap';
+import Rating from './Rating'
 
 const Cart = () => {
   const{
@@ -18,7 +19,16 @@ const Cart = () => {
       <ListGroup>
         {
           cart.map(prod=>(
-            <span>{prod.name}</span>
+            <ListGroup.Item key={prod.id}>
+              <Row>
+                <Col md={2}>
+                  <span>{prod.name}</span>
+                </Col>
+                <Col md={2}>₹ {prod.price}</Col>
+                <Col md={2}>
+                <Rating rating={prod.ratings}></Rating> </Col>
+              </Row>
+            </ListGroup.Item>
           ))
         }
       </ListGroup>
