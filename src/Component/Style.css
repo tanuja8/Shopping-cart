@@ -42,7 +42,7 @@
 .cartItemDetails{
     display: flex;
     flex: 1;
-    padding: 40px 40px;
+    padding: 0 40px;
     flex-direction: column;
 
 }
