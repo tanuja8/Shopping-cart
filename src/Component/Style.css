@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.productcontainer{
+.productContainer{
     display: grid;
     grid-template-columns: repeat(4,2fr);
     gap: 15px;
