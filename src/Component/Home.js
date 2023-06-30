@@ -7,12 +7,22 @@ import Filter from './Filter';
 const Home=() => {
   const {
     state:{products},}=CartState();
-  console.log(products);
+    const transFormProducts=()=>{
+      let sortedProducts=products;
+      let sort;
+      if(sort){
+        sortedProducts=sortedProducts.sort((a,b)=>(
+          sort==="lowToHigh"?a.price-b.price:b.price-a.price
+        ))
+      }
+      return sortedProducts;
+    }
+  // console.log(products);
   return (
 <div className='home'>
   <Filter></Filter>
   <div className='productContainer'>
-  {products.map((prod)=>{
+  {transFormProducts().map((prod)=>{
     return<h6><Singleproduct prod={prod} key={prod.id}>
       </Singleproduct></h6>
   })}

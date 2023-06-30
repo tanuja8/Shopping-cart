@@ -2,6 +2,7 @@ import { faker } from '@faker-js/faker';
 import React, { useReducer } from 'react'
 import { createContext } from 'react'
 import { cartReducer } from './Reducer';
+import { productReducer } from './Reducer';
 import { useContext } from 'react';
 
 const Cart=createContext();
@@ -19,10 +20,16 @@ const Context = ({children}) => {
     }));
     const [state,dispatch]=useReducer(cartReducer,{
           products:products,
-          cart:[] 
+          cart:[] ,
+    });
+    const[productState,productDispatch]=useReducer(productReducer,{
+      byStock:false,
+      byFastDelivery:false,
+      byRating:0,
+      searchQuery:"",
     })
   return (
-    <Cart.Provider value={{state,dispatch}}>
+    <Cart.Provider value={{state,dispatch,productState,productDispatch}}>
         {children}
     </Cart.Provider>
   )

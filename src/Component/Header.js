@@ -7,7 +7,8 @@ import { CartState } from './Context/Context'
 const Header = () => {
   const{
     state:{cart},
-  dispatch}=CartState();
+  dispatch,
+  productDispatch}=CartState();
   return (
     <>
     <Navbar bg='dark' variant='dark' style={{height:80}}>
@@ -16,7 +17,13 @@ const Header = () => {
           <Link to="/">Shopping Cart</Link>
         </Navbar.Brand>
         <Navbar.Text className='search'>
-          <FormControl style={{width:500}} placeholder='Search a product' className='m-auto'/>
+          <FormControl style={{width:500}} placeholder='Search a product' className='m-auto'
+          onChange={(e)=>{
+productDispatch({
+  type:"FILTER_BY_SEARCH",
+  payload:e.target.value,
+})
+          }}/>
         </Navbar.Text>
         <Nav>
           <Dropdown  alignRight>
