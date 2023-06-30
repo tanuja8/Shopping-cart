@@ -52,7 +52,7 @@ const Filter = () => {
         onclick={(i)=>SetRate(i+1)} 
         style={{cursor:"pointer"}}></Rating>
     </span>
-    <Button variant='light'> Clear Filter</Button>
+    <Button > Clear Filter</Button>
     </div>
   )
 }
