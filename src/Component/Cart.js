@@ -22,9 +22,9 @@ const Cart = () => {
         {
           cart.map(prod=>(
             <ListGroup.Item key={prod.id}>
-              <Row>
+              <Row className='my-3 py-3 ' >
               <Col md={2}>
-                <Image src={prod.image} alt={prod.name} fluid rounded></Image>
+                <Image src={prod.image} alt={prod.name}  className='cartimg'></Image>
               </Col>
                 <Col md={2} >
                   <span >{prod.name}</span>
